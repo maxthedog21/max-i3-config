@@ -165,7 +165,7 @@ set $selectionName "selection w: Window | o: Open | p: Program Search c: Workspa
 set $WindowName "h: Move Window Left | j: Move Window down | k: Move Window up | l: Move Window Right"
 set $workSpaceMode "h: Move window to left work space | l Move window to right workspace"
 set $openMode "b: Browser | w: Whatsapp | t: Terminal | n: Neovim | v: VScode | s: Spotify | c: Chatgpt"
-set $settingsMode "w: wifi | b: bluetooth"
+set $settingsMode "w: Wifi | b: Bluetooth e: Logout"
 
 
 mode $selectionName {
@@ -238,6 +238,7 @@ mode $settingsMode {
 	bindsym b exec $terminalApplication -e bluetui-x86_64-linux-gnu 
         bindsym Escape mode $selectionName
         bindsym Return mode "default"
+	bindsym e exit
 }
 
 mode "resize" {
